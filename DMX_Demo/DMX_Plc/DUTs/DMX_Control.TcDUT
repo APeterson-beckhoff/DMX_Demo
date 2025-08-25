@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="DMX_Control" Id="{44b57fa9-0c17-449d-87e7-1caecb8b895b}">
+    <Declaration><![CDATA[TYPE DMX_Control :
+STRUCT
+	TransmitRequest : BIT;
+	DisableCyclicTxD : BIT;
+	SendDefaultData : BIT;
+	ChannelLength : UINT;
+	StartCode : USINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

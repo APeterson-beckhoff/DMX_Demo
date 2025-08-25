@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<VarLinks>
+	<OwnerA Name="TIPC^DMX_Plc^DMX_Plc Instance">
+		<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL6851)">
+			<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^ChannelLength" VarB="DMX Status^Channel length"/>
+			<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^CyclicTxD_Disabled" VarB="DMX Status^Cyclic TxD disabled"/>
+			<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^DefaultDataSent" VarB="DMX Status^Default data sent"/>
+			<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^FrameSentToggle" VarB="DMX Status^Frame sent toggle"/>
+			<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^RecieveToggle" VarB="DMX Status^Receive toggle"/>
+			<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^StartCode" VarB="DMX Status^Start code"/>
+			<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^TransmitAccepted" VarB="DMX Status^Transmit accepted"/>
+			<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^TxPdoToggle" VarB="DMX Status^TxPDO Toggle"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^Blue" VarB="DMX Channel 1-64^Channel 10"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^CH12" VarB="DMX Channel 1-64^Channel 12"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^CH13" VarB="DMX Channel 1-64^Channel 13"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^Dimming" VarB="DMX Channel 1-64^Channel 6"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^Green" VarB="DMX Channel 1-64^Channel 9"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^Pan" VarB="DMX Channel 1-64^Channel 1"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^PanFine" VarB="DMX Channel 1-64^Channel 2"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^PanTiltSpeed" VarB="DMX Channel 1-64^Channel 5"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^Red" VarB="DMX Channel 1-64^Channel 8"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^Strobe" VarB="DMX Channel 1-64^Channel 7"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^Tilt" VarB="DMX Channel 1-64^Channel 3"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^TiltFine" VarB="DMX Channel 1-64^Channel 4"/>
+			<Link VarA="PlcTask Outputs^MAIN.Mover1^White" VarB="DMX Channel 1-64^Channel 11"/>
+			<Link VarA="PlcTask Outputs^MAIN.Universe1_Control^ChannelLength" VarB="DMX Control^Channel length"/>
+			<Link VarA="PlcTask Outputs^MAIN.Universe1_Control^DisableCyclicTxD" VarB="DMX Control^Disable cyclic TxD"/>
+			<Link VarA="PlcTask Outputs^MAIN.Universe1_Control^SendDefaultData" VarB="DMX Control^Send default data"/>
+			<Link VarA="PlcTask Outputs^MAIN.Universe1_Control^StartCode" VarB="DMX Control^Start code"/>
+			<Link VarA="PlcTask Outputs^MAIN.Universe1_Control^TransmitRequest" VarB="DMX Control^Transmit request"/>
+		</OwnerB>
+	</OwnerA>
+</VarLinks>

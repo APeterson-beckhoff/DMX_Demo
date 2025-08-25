@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="DMX_Status" Id="{4f497bbd-1451-443c-9515-30040aba4375}">
+    <Declaration><![CDATA[TYPE DMX_Status :
+STRUCT
+	TransmitAccepted : BIT;
+	RecieveToggle : BIT;
+	CyclicTxD_Disabled : BIT;
+	DefaultDataSent : BIT;
+	FrameSentToggle : BIT;
+	TxPdoToggle : BIT;
+	ChannelLength : UINT;
+	StartCode : USINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

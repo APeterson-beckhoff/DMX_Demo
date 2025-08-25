@@ -1,13 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{5b7ed463-4ea7-4cdb-807c-6eeb36d90ee8}">
+  <POU Name="MAIN" Id="{5b7ed463-4ea7-4cdb-807c-6eeb36d90ee8}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	FB_DMXDiscovery512_01 : FB_DMXDiscovery512;
+	
+	Mover1 AT %Q* : Mover_13Ch;
+	Universe1_Status AT %I* : DMX_Status;
+	Universe1_Control AT %Q* : DMX_Control;
+	
+	FixtureChLength : UINT := 13;
+	
 END_VAR
-]]>
-    </Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[
+
+
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -18,6 +18,15 @@
     <LibraryReferences>{60046e6e-db0a-4ccb-bef5-704410cdc3c4}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\DMX_Control.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\DMX_Status.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Mover_13Ch.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -32,6 +41,10 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="Tc2_DMX">
+      <DefaultResolution>Tc2_DMX, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_DMX</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_Standard</Namespace>
@@ -45,6 +58,11 @@
       <Namespace>Tc3_Module</Namespace>
       <SystemLibrary>true</SystemLibrary>
     </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DMX_Plc.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>

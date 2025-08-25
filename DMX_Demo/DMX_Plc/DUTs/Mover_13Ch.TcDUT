@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="Mover_13Ch" Id="{0f43caa5-fbd5-47d1-acd9-811bc835098e}">
+    <Declaration><![CDATA[TYPE Mover_13Ch :
+STRUCT
+	Pan : BYTE;
+	PanFine : BYTE;
+	Tilt : BYTE;
+	TiltFine : BYTE;
+	PanTiltSpeed : BYTE;
+	Dimming : BYTE;
+	Strobe : BYTE;
+	Red : BYTE;
+	Green : BYTE;
+	Blue : BYTE;
+	White : BYTE;
+	CH12 : BYTE; //0-30 = No Function, 31-127 = Auto 1, 127-249 = Auto 2, 250-255 = Sound Mode
+	CH13 : BYTE; //0-149 = No Function, 150-200 = Reset, 201-255 = No Function
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
