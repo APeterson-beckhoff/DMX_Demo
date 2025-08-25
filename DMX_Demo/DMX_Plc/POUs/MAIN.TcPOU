@@ -11,12 +11,15 @@ VAR
 	
 	FixtureChLength : UINT := 13;
 	
+	TestBool : BOOL;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
+Mover1.Strobe := 0;
 
-
+TestBool := TestBool;
 ]]></ST>
     </Implementation>
   </POU>
