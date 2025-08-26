@@ -122,6 +122,9 @@
   <Target Name="Clean" DependsOnTargets="$(CleanDependsOn)" />
   <Target Name="ReBuild" DependsOnTargets="Clean; Build" />
   <ItemGroup>
+    <Content Include="Pages\Content1.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Server\BaSite\BaSite.Config.default.json">
       <SubType>Content</SubType>
     </Content>
@@ -137,6 +140,13 @@
     <Content Include="UserControls\Mover13Ch.usercontrol.json">
       <SubType>Content</SubType>
       <DependentUpon>UserControls\Mover13Ch.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="UserControls\UserControl1.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\UserControl1.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\UserControl1.usercontrol</DependentUpon>
     </Content>
     <Folder Include="Fonts\" />
     <Folder Include="Images" />
@@ -178,9 +188,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Pages\Settings.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Pages\StartPage.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\ADS\ADS.Config.default.json">

@@ -2,6 +2,8 @@
   "parameters": [
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setPan",
@@ -19,6 +21,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setPanFine",
@@ -36,6 +40,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setTilt",
@@ -53,6 +59,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setTiltFine",
@@ -70,6 +78,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setPanTiltSpeed",
@@ -87,6 +97,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setDimming",
@@ -104,6 +116,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setRed",
@@ -121,6 +135,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setGreen",
@@ -138,6 +154,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setBlue",
@@ -155,6 +173,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setWhite",
@@ -172,6 +192,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setCH12",
@@ -189,6 +211,8 @@
     },
     {
       "allowSymbolExpressionsInObject": false,
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "bindable": true,
       "propertySetterName": "setCh13",

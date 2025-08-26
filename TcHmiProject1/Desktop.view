@@ -175,36 +175,58 @@
 "divider",
 "divider-left"
 ]
-</script><script data-tchmi-target-attribute="data-tchmi-navigation-items" type="application/json">[
-{
- "id": "StartPage",
- "name": "%l%L_StartPage%/l%",
- "content": "Pages/StartPage.content",
- "icon": "%tr%TR_Icon_StartPage_normal%/tr%",
- "iconActive": "%tr%TR_Icon_StartPage_active%/tr%",
- "iconPressed": "%tr%TR_Icon_StartPage_pressed%/tr%"},
-{
- "id": "Events",
- "name": "%l%L_Events%/l%",
- "content": "Pages/Events.content",
- "icon": "%tr%TR_Icon_Events_normal%/tr%",
- "iconActive": "%tr%TR_Icon_Events_active%/tr%",
- "iconPressed": "%tr%TR_Icon_Events_pressed%/tr%"},
-{
- "id": "Settings",
- "name": "%l%L_Settings%/l%",
- "content": "Pages/Settings.content",
- "icon": "%tr%TR_Icon_Settings_normal%/tr%",
- "iconActive": "%tr%TR_Icon_Settings_active%/tr%",
- "iconPressed": "%tr%TR_Icon_Settings_pressed%/tr%"},
-{
- "id": "Diagnostics",
- "name": "%l%L_Diagnostics%/l%",
- "content": "Pages/Diagnostics.content",
- "icon": "%tr%TR_Icon_Diagnostics_normal%/tr%",
- "iconActive": "%tr%TR_Icon_Diagnostics_active%/tr%",
- "iconPressed": "%tr%TR_Icon_Diagnostics_pressed%/tr%"}
-]</script></div><div id="Region_Center" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-left="%ctrl%Accordion_Navigation_Left::Width%/ctrl%" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-scrolling="Yes" data-tchmi-bottom="0" data-tchmi-right="0">
+</script><script data-tchmi-target-attribute="data-tchmi-navigation-items" type="application/json">
+[
+  {
+    "content": "Pages/Content1.content",
+    "icon": "%tr%TR_Icon_StartPage_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_StartPage_active%/tr%",
+    "iconHeight": 48,
+    "iconHeightUnit": "px",
+    "iconPressed": "%tr%TR_Icon_StartPage_pressed%/tr%",
+    "iconWidth": 48,
+    "iconWidthUnit": "px",
+    "id": "StartPage",
+    "name": "%l%L_StartPage%/l%"
+  },
+  {
+    "content": "Pages/Events.content",
+    "icon": "%tr%TR_Icon_Events_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Events_active%/tr%",
+    "iconHeight": 48,
+    "iconHeightUnit": "px",
+    "iconPressed": "%tr%TR_Icon_Events_pressed%/tr%",
+    "iconWidth": 48,
+    "iconWidthUnit": "px",
+    "id": "Events",
+    "name": "%l%L_Events%/l%"
+  },
+  {
+    "content": "Pages/Settings.content",
+    "icon": "%tr%TR_Icon_Settings_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Settings_active%/tr%",
+    "iconHeight": 48,
+    "iconHeightUnit": "px",
+    "iconPressed": "%tr%TR_Icon_Settings_pressed%/tr%",
+    "iconWidth": 48,
+    "iconWidthUnit": "px",
+    "id": "Settings",
+    "name": "%l%L_Settings%/l%"
+  },
+  {
+    "content": "Pages/Diagnostics.content",
+    "icon": "%tr%TR_Icon_Diagnostics_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Diagnostics_active%/tr%",
+    "iconHeight": 48,
+    "iconHeightUnit": "px",
+    "iconPressed": "%tr%TR_Icon_Diagnostics_pressed%/tr%",
+    "iconWidth": 48,
+    "iconWidthUnit": "px",
+    "id": "Diagnostics",
+    "name": "%l%L_Diagnostics%/l%"
+  }
+]
+</script></div><div id="Region_Center" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-left="%ctrl%Accordion_Navigation_Left::Width%/ctrl%" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-scrolling="Yes" data-tchmi-bottom="0" data-tchmi-right="0">
 
 <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json"></script></div><script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[ 
                 {   

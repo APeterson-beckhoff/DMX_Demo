@@ -8,6 +8,14 @@
       "frameworkUserControlConfig": "UserControls\\Mover13Ch.usercontrol.json",
       "id": "tchmi:project#/definitions/Mover13Ch",
       "type": "object"
+    },
+    "UserControl1": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\UserControl1.usercontrol.json",
+      "id": "tchmi:project#/definitions/UserControl1",
+      "type": "object"
     }
   }
 }

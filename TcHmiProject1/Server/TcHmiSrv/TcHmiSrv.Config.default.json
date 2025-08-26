@@ -849,6 +849,24 @@
             },
             "USEMAPPING": true
         },
+        "ADS.PLC1.MAIN.Mover1.CH13": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::Mover1::CH13",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BYTE"
+                    },
+                    {
+                        "comment": "0-149 = No Function, 150-200 = Reset, 201-255 = No Function",
+                        "propertyOrder": 13
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "ADS.PLC1.MAIN.Mover1.Dimming": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -6040,6 +6058,7 @@
                 "ADS.Diagnostics": 3,
                 "ADS.PLC1.MAIN.Mover1.Blue": 3,
                 "ADS.PLC1.MAIN.Mover1.CH12": 3,
+                "ADS.PLC1.MAIN.Mover1.CH13": 3,
                 "ADS.PLC1.MAIN.Mover1.Dimming": 3,
                 "ADS.PLC1.MAIN.Mover1.Green": 3,
                 "ADS.PLC1.MAIN.Mover1.Pan": 3,
@@ -6181,6 +6200,7 @@
         "/Beckhoff.TwinCAT.HMI.EcDiagnosticsControl": "..\\..\\DMX_Demo\\Packages\\Beckhoff.TwinCAT.HMI.EcDiagnosticsControl.14.3.210\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\DMX_Demo\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.3.212\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\DMX_Demo\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.3.210\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Industries.Common": "..\\..\\DMX_Demo\\Packages\\Beckhoff.TwinCAT.HMI.Industries.Common.14.3.210\\runtimes\\native1.12-tchmi",
         "/bin": "..\\..\\TcHmiProject1\\bin\\"
     }
 }

@@ -1,0 +1,5 @@
+<div id="Content1_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="800" data-tchmi-height="640">
+
+<div id="UserControl1_2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="517" data-tchmi-height-unit="px" data-tchmi-left="118" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/UserControl1.usercontrol" data-tchmi-top="54" data-tchmi-top-unit="px" data-tchmi-width="434" data-tchmi-width-unit="px" data-tchmi-param1="%s%ADS.PLC1.MAIN.Mover1.CH12%/s%" data-tchmi-param2="%s%ADS.PLC1.MAIN.Mover1.CH13%/s%">
+</div>
+</div>

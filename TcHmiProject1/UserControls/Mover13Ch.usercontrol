@@ -1,38 +1,6 @@
 <div id="Mover13Ch_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
 
-<div id="TcHmiGrid_2" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="235" data-tchmi-height-unit="px" data-tchmi-width="225" data-tchmi-width-unit="px" data-tchmi-right="-41.6" data-tchmi-right-unit="%" data-tchmi-bottom="6.0" data-tchmi-bottom-unit="%" data-tchmi-left="245"><div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="TcHmiSpinboxInput_Speed" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiSpinboxInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="21.5" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-right-unit="%" data-tchmi-left-unit="%" data-tchmi-left="5" data-tchmi-system-keyboard-input-mode="text" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-value-horizontal-alignment="Center" data-tchmi-placeholder="0" data-tchmi-value="0">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%PanTiltSpeed%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
-</div>
-
+<div id="TcHmiGrid_3" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="250" data-tchmi-height-unit="px" data-tchmi-width="250" data-tchmi-width-unit="px" data-tchmi-bottom="10" data-tchmi-bottom-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%">
 <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
 [
   {
@@ -77,246 +45,9 @@
   }
 ]
 </script>
-<div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="Slider_Tilt_Fine_1" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-value="0" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True">
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%TiltFine%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
+<div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="Slider_White_1" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-value="%pp%White|BindingMode=TwoWay%/pp%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True">
 
 
-</div>
-<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="Slider_Pan_Fine_1" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="22.0" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True" data-tchmi-text-font-style="Normal" data-tchmi-text-font-weight="Normal" data-tchmi-text-decoration-line="none" data-tchmi-text-decoration-style="solid" data-tchmi-user-select="auto">
-
-
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%PanFine%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
-</div>
-<div id="Slider_Pan" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True" data-tchmi-text-font-style="Normal" data-tchmi-text-font-weight="Normal" data-tchmi-text-decoration-line="none" data-tchmi-text-decoration-style="solid" data-tchmi-user-select="auto">
-<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
-{
-  "left": "Solid",
-  "right": "Solid",
-  "top": "Solid",
-  "bottom": "Solid"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-ranges" type="application/json">
-[
-  {
-    "color": {
-      "color": "rgba(0, 0, 0, 1)"
-    },
-    "end": 0.0,
-    "start": 255.0
-  }
-]
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%Pan%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
-{
-  "angle": 0.0,
-  "stopPoints": [
-    {
-      "color": "rgba(207, 10, 10, 0)",
-      "stop": "0%"
-    },
-    {
-      "color": "rgba(214, 9, 9, 0)",
-      "stop": "100%"
-    }
-  ]
-}
-</script>
-
-
-
-
-</div>
-<div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="Slider_Tilt" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="21.8" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True" data-tchmi-text-font-style="Normal" data-tchmi-text-font-weight="Normal" data-tchmi-text-decoration-line="none" data-tchmi-text-decoration-style="solid" data-tchmi-user-select="auto">
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%Tilt%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
-
-
-</div>
-
-<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
-[
-  {
-    "maxWidthUnit": "px",
-    "minWidthUnit": "px",
-    "overflow": false,
-    "width": 1.0,
-    "widthMode": "Value",
-    "widthUnit": "factor"
-  },
-  {
-    "maxWidthUnit": "px",
-    "minWidthUnit": "px",
-    "overflow": false,
-    "width": 1.0,
-    "widthMode": "Value",
-    "widthUnit": "factor"
-  }
-]
-</script>
-<div id="TcHmiTextblock_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Pan" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
-</div>
-<div id="TcHmiTextblock_7" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="1" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Pan Fine" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
-</div>
-<div id="TcHmiTextblock_8" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="2" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Tilt" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
-</div>
-<div id="TcHmiTextblock_9" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="3" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Tilt Fine" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
-</div>
-<div id="TcHmiTextblock_10" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="4" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Speed" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
-</div>
-</div>
-<div id="TcHmiGrid_3" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="235" data-tchmi-height-unit="px" data-tchmi-width="211" data-tchmi-width-unit="px" data-tchmi-right="12.2" data-tchmi-right-unit="%" data-tchmi-bottom="6.0" data-tchmi-bottom-unit="%" data-tchmi-left="0">
-<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
-[
-  {
-    "height": 1,
-    "heightMode": "Value",
-    "heightUnit": "factor",
-    "maxHeightUnit": "px",
-    "minHeightUnit": "px",
-    "overflow": false
-  },
-  {
-    "height": 1,
-    "heightMode": "Value",
-    "heightUnit": "factor",
-    "maxHeightUnit": "px",
-    "minHeightUnit": "px",
-    "overflow": false
-  },
-  {
-    "height": 1,
-    "heightMode": "Value",
-    "heightUnit": "factor",
-    "maxHeightUnit": "px",
-    "minHeightUnit": "px",
-    "overflow": false
-  },
-  {
-    "height": 1,
-    "heightMode": "Value",
-    "heightUnit": "factor",
-    "maxHeightUnit": "px",
-    "minHeightUnit": "px",
-    "overflow": false
-  },
-  {
-    "height": 1,
-    "heightMode": "Value",
-    "heightUnit": "factor",
-    "maxHeightUnit": "px",
-    "minHeightUnit": "px",
-    "overflow": false
-  }
-]
-</script>
-<div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="Slider_White_1" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-value="%pp%White%/pp%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True">
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%White%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
 
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
@@ -324,28 +55,9 @@
 }
 </script>
 </div>
-<div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="Slider_Blue_2" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-value="%pp%Blue%/pp%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True">
+<div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="Slider_Blue_2" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-value="%pp%Blue|BindingMode=TwoWay%/pp%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True">
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%Blue%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
+
 
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
@@ -353,28 +65,9 @@
 }
 </script>
 </div>
-<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="Slider_Green_2" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="22.0" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-value="%pp%Green%/pp%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True" data-tchmi-text-font-style="Normal" data-tchmi-text-font-weight="Normal" data-tchmi-text-decoration-line="none" data-tchmi-text-decoration-style="solid" data-tchmi-user-select="auto">
+<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="Slider_Green_2" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="22.0" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-value="%pp%Green|BindingMode=TwoWay%/pp%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True" data-tchmi-text-font-style="Normal" data-tchmi-text-font-weight="Normal" data-tchmi-text-decoration-line="none" data-tchmi-text-decoration-style="solid" data-tchmi-user-select="auto">
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%Green%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
+
 
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
@@ -382,7 +75,7 @@
 }
 </script>
 </div>
-<div id="Slider_Red_2" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True" data-tchmi-text-font-style="Normal" data-tchmi-text-font-weight="Normal" data-tchmi-text-decoration-line="none" data-tchmi-text-decoration-style="solid" data-tchmi-user-select="auto">
+<div id="Slider_Red_2" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True" data-tchmi-text-font-style="Normal" data-tchmi-text-font-weight="Normal" data-tchmi-text-decoration-line="none" data-tchmi-text-decoration-style="solid" data-tchmi-user-select="auto" data-tchmi-value="%pp%Red|BindingMode=TwoWay%/pp%">
 <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
 {
   "left": "Solid",
@@ -392,38 +85,9 @@
 }
 </script>
 
-<script data-tchmi-target-attribute="data-tchmi-ranges" type="application/json">
-[
-  {
-    "color": {
-      "color": "rgba(0, 0, 0, 1)"
-    },
-    "end": 0.0,
-    "start": 255.0
-  }
-]
-</script>
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%Red%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
+
+
 
 
 
@@ -451,27 +115,8 @@
 }
 </script>
 </div>
-<div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="Slider_Dimming_2" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-value="%pp%Dimming%/pp%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True" data-tchmi-right-unit="%" data-tchmi-left-unit="%" data-tchmi-left="5">
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%Dimming%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
+<div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="Slider_Dimming_2" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-value="%pp%Dimming|BindingMode=TwoWay%/pp%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True" data-tchmi-right-unit="%" data-tchmi-left-unit="%" data-tchmi-left="5">
+
 
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
@@ -520,33 +165,128 @@
 </div>
 <div id="TcHmiTextblock_15" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="4" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Dimming" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
 </div>
-<div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="Slider_White_2" data-tchmi-type="TcHmi.BuildingAutomation.Controls.Common.Slider" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width="90" data-tchmi-width-unit="%" data-tchmi-value="%pp%White%/pp%" data-tchmi-min-value="0" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-show-scale="False" data-tchmi-show-value="True">
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+</div>
+<div id="TcHmiGrid_4" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-bottom="10" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-width-mode="Content" data-tchmi-height-mode="Content" data-tchmi-right-unit="%"><div id="TcHmiLinearGauge_Pan" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLinearGauge" data-tchmi-base-animation-time="1000" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-show-labels="False" data-tchmi-show-ticks="False" data-tchmi-show-value-text="True" data-tchmi-start-from-zero="True" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-editable="True" data-tchmi-value="%ctrl%TcHmiLinearGauge_Pan::SetPoint%/ctrl%" data-tchmi-set-point="%pp%Pan|BindingMode=TwoWay%/pp%" data-tchmi-max-value="255" data-tchmi-step="1">
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+</div>
+
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
 [
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%pp%White%/pp%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/BYTE",
-          "symbolExpression": "%ctx%owner::Value%/ctx%"
-        },
-        "asyncWait": true
-      }
-    ]
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false,
+    "width": 1,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  },
+  {
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false,
+    "width": 1,
+    "widthMode": "Value",
+    "widthUnit": "factor"
   }
 ]
 </script>
 
-<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="TcHmiLinearGauge_Pan_Fine" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLinearGauge" data-tchmi-base-animation-time="1000" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-show-labels="False" data-tchmi-show-ticks="False" data-tchmi-show-value-text="True" data-tchmi-start-from-zero="True" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-editable="True" data-tchmi-max-value="255" data-tchmi-step="1" data-tchmi-set-point="%pp%PanFine|BindingMode=TwoWay%/pp%" data-tchmi-value="%ctrl%TcHmiLinearGauge_Pan_Fine::SetPoint%/ctrl%">
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
 {
-  "color": "rgba(231, 220, 220, 1)"
+  "mainTickRange": 20,
+  "subTickRange": 5
 }
 </script>
+
+</div>
+<div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="TcHmiLinearGauge_Tilt" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLinearGauge" data-tchmi-base-animation-time="1000" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-show-labels="False" data-tchmi-show-ticks="False" data-tchmi-show-value-text="True" data-tchmi-start-from-zero="True" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-editable="True" data-tchmi-value="%ctrl%TcHmiLinearGauge_Tilt::SetPoint%/ctrl%" data-tchmi-set-point="%pp%Tilt|BindingMode=TwoWay%/pp%" data-tchmi-max-value="255" data-tchmi-step="1">
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+</div>
+<div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="TcHmiLinearGauge_Tilt_Fine" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLinearGauge" data-tchmi-base-animation-time="1000" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-show-labels="False" data-tchmi-show-ticks="False" data-tchmi-show-value-text="True" data-tchmi-start-from-zero="True" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-editable="True" data-tchmi-value="%ctrl%TcHmiLinearGauge_Tilt_Fine::SetPoint%/ctrl%" data-tchmi-set-point="%pp%TiltFine|BindingMode=TwoWay%/pp%" data-tchmi-max-value="255" data-tchmi-step="1">
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+</div>
+<div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="TcHmiLinearGauge_PanTilt_Speed" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLinearGauge" data-tchmi-base-animation-time="1000" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-show-labels="False" data-tchmi-show-ticks="False" data-tchmi-show-value-text="True" data-tchmi-start-from-zero="True" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-editable="True" data-tchmi-value="%ctrl%TcHmiLinearGauge_PanTilt_Speed::SetPoint%/ctrl%" data-tchmi-set-point="%pp%PanTiltSpeed|BindingMode=TwoWay%/pp%" data-tchmi-max-value="255" data-tchmi-step="1">
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+</div>
+<div id="TcHmiTextblock_16" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Pan" data-tchmi-top="0.0" data-tchmi-top-unit="%" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
+</div>
+<div id="TcHmiTextblock_17" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="1" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Pan Fine" data-tchmi-top="0.0" data-tchmi-top-unit="%" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
+</div>
+<div id="TcHmiTextblock_20" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="4" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Speed" data-tchmi-top="0.0" data-tchmi-top-unit="%" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
+</div>
+<div id="TcHmiTextblock_19" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="3" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Tilt Fine" data-tchmi-top="0.0" data-tchmi-top-unit="%" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
+</div>
+<div id="TcHmiTextblock_18" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="2" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="Tilt" data-tchmi-top="0.0" data-tchmi-top-unit="%" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
 </div>
 </div>
 </div>

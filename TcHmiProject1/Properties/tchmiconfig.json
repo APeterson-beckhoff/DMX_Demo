@@ -59,9 +59,19 @@
   "userControls": [
     {
       "url": "UserControls/Mover13Ch.usercontrol"
+    },
+    {
+      "url": "UserControls/UserControl1.usercontrol"
     }
   ],
   "content": [
+    {
+      "url": "Pages/Content1.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
     {
       "url": "Pages/Diagnostics.content",
       "preload": false,
@@ -78,13 +88,6 @@
     },
     {
       "url": "Pages/Settings.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Pages/StartPage.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -399,6 +402,10 @@
     {
       "name": "Beckhoff.TwinCAT.HMI.Functions",
       "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Industries.Common",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Industries.Common"
     }
   ],
   "keyboardLayouts": [
