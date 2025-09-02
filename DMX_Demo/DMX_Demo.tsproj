@@ -3409,7 +3409,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{1DAAD130-3D14-4FCC-BF58-3387EA54043E}" Name="DMX_Plc" PrjFilePath="DMX_Plc\DMX_Plc.plcproj" TmcFilePath="DMX_Plc\DMX_Plc.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{2632C978-0EA8-4527-CAD8-62BD5DB267D9}" TmcPath="DMX_Plc\DMX_Plc.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{E8755000-947E-6BB8-FD1C-CE3ACA331F13}" TmcPath="DMX_Plc\DMX_Plc.tmc">
 					<Name>DMX_Plc Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -6679,7 +6679,6 @@
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^DMX_Plc^DMX_Plc Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL6851)">
-				<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^ChannelLength" VarB="DMX Status^Channel length"/>
 				<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^CyclicTxD_Disabled" VarB="DMX Status^Cyclic TxD disabled"/>
 				<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^DefaultDataSent" VarB="DMX Status^Default data sent"/>
 				<Link VarA="PlcTask Inputs^MAIN.Universe1_Status^FrameSentToggle" VarB="DMX Status^Frame sent toggle"/>

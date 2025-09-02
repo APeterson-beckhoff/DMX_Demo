@@ -18,7 +18,9 @@ END_VAR
     <Implementation>
       <ST><![CDATA[
 Mover1.Strobe := 0;
-
+FixtureChLength := 13;
+//Universe1_Status.ChannelLength := FixtureChLength;
+Universe1_Control.ChannelLength := FixtureChLength;
 TestBool := TestBool;
 ]]></ST>
     </Implementation>
