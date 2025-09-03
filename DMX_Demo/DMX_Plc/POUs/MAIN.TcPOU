@@ -3,7 +3,11 @@
   <POU Name="MAIN" Id="{5b7ed463-4ea7-4cdb-807c-6eeb36d90ee8}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-	FB_DMXDiscovery512_01 : FB_DMXDiscovery512;
+	FB_DMXDiscovery512_01: FB_DMXDiscovery512;
+	DMX_CommandBuffer:ST_DMXCommandBuffer;
+	FB_EL6851CommunicationEx_01: FB_EL6851CommunicationEx;
+	ST_EL6851InData_01 : ST_EL6851InData;
+	ST_EL6851OutData_01 : ST_EL6851OutData;
 	
 	Mover1 AT %Q* : Mover_13Ch;
 	Universe1_Status AT %I* : DMX_Status;
@@ -17,11 +21,41 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-Mover1.Strobe := 0;
-FixtureChLength := 13;
-//Universe1_Status.ChannelLength := FixtureChLength;
 Universe1_Control.ChannelLength := FixtureChLength;
 TestBool := TestBool;
+
+FB_EL6851CommunicationEx_01(
+	wSourceManufacturerId:= , 
+	dwSourceDeviceId:= , 
+	bEnableSendingData:= TRUE, 
+	bSetCycleMode:= TRUE, 
+	bSendDefaultData:= FALSE, 
+	uiDataLength:= , 
+	dwOptions:= , 
+	bError=> , 
+	udiErrorId=> , 
+	bCycleMode=> , 
+	byBufferDemandMeter=> , 
+	byBufferMaximumDemandMeter=> , 
+	uiBufferOverflowCounter=> , 
+	bLineIsBusy=> , 
+	stEL6851InData:= ST_EL6851InData_01, 
+	stEL6851OutData:= ST_EL6851OutData_01, 
+	stCommandBuffer:= DMX_CommandBuffer, 
+	arrProcessData:= );
+
+FB_DMXDiscovery512_01(
+	bStart:= TRUE, 
+	dwOptions:= DMX_OPTION_COMPLETE_NEW_DISCOVERY, 
+	bBusy=> , 
+	bError=> , 
+	udiErrorId=> , 
+	uliLowerBoundSearchUID=> , 
+	uliUpperBoundSearchUID=> , 
+	arrDMXDeviceInfoList=> , 
+	uiNextDMX512StartAddress=> , 
+	iFoundDevices=> , 
+	stCommandBuffer:= DMX_CommandBuffer);
 ]]></ST>
     </Implementation>
   </POU>

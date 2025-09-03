@@ -969,6 +969,23 @@
             },
             "USEMAPPING": true
         },
+        "ADS.PLC1.MAIN.Mover1.Strobe": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::Mover1::Strobe",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BYTE"
+                    },
+                    {
+                        "propertyOrder": 7
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "ADS.PLC1.MAIN.Mover1.Tilt": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -6065,6 +6082,7 @@
                 "ADS.PLC1.MAIN.Mover1.PanFine": 3,
                 "ADS.PLC1.MAIN.Mover1.PanTiltSpeed": 3,
                 "ADS.PLC1.MAIN.Mover1.Red": 3,
+                "ADS.PLC1.MAIN.Mover1.Strobe": 3,
                 "ADS.PLC1.MAIN.Mover1.Tilt": 3,
                 "ADS.PLC1.MAIN.Mover1.TiltFine": 3,
                 "ADS.PLC1.MAIN.Mover1.White": 3,

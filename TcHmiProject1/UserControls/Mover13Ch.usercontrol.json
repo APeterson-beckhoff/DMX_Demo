@@ -203,6 +203,23 @@
       "readOnly": false,
       "heritable": true,
       "propertyName": "Ch13"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setStrobe",
+      "propertyGetterName": "getStrobe",
+      "refTo": "",
+      "name": "data-tchmi-strobe",
+      "displayName": "Strobe",
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "Strobe"
     }
   ],
   "virtualRights": [],
