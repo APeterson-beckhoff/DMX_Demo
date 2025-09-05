@@ -6,12 +6,11 @@ VAR
 	FB_DMXDiscovery512_01: FB_DMXDiscovery512;
 	DMX_CommandBuffer:ST_DMXCommandBuffer;
 	FB_EL6851CommunicationEx_01: FB_EL6851CommunicationEx;
-	ST_EL6851InData_01 : ST_EL6851InData;
-	ST_EL6851OutData_01 : ST_EL6851OutData;
+	ST_EL6851InData_01 AT %I* : ST_EL6851InDataEx;
+	ST_EL6851OutData_01 AT %Q*: ST_EL6851OutData;
+	ProcessData : ARRAY [1..512] OF BYTE; 
 	
 	Mover1 AT %Q* : Mover_13Ch;
-	Universe1_Status AT %I* : DMX_Status;
-	Universe1_Control AT %Q* : DMX_Control;
 	
 	FixtureChLength : UINT := 13;
 	
@@ -21,15 +20,13 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-Universe1_Control.ChannelLength := FixtureChLength;
-TestBool := TestBool;
 
 FB_EL6851CommunicationEx_01(
 	wSourceManufacturerId:= , 
 	dwSourceDeviceId:= , 
-	bEnableSendingData:= TRUE, 
-	bSetCycleMode:= TRUE, 
-	bSendDefaultData:= FALSE, 
+	bEnableSendingData:= , 
+	bSetCycleMode:= , 
+	bSendDefaultData:= , 
 	uiDataLength:= , 
 	dwOptions:= , 
 	bError=> , 
@@ -42,10 +39,10 @@ FB_EL6851CommunicationEx_01(
 	stEL6851InData:= ST_EL6851InData_01, 
 	stEL6851OutData:= ST_EL6851OutData_01, 
 	stCommandBuffer:= DMX_CommandBuffer, 
-	arrProcessData:= );
+	arrProcessData:= ProcessData);
 
 FB_DMXDiscovery512_01(
-	bStart:= TRUE, 
+	bStart:= , 
 	dwOptions:= DMX_OPTION_COMPLETE_NEW_DISCOVERY, 
 	bBusy=> , 
 	bError=> , 
