@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="DMX_Mode" Id="{53113765-49b0-4092-bd3e-7ffe8cfbdf13}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+{attribute 'to_string'}
+TYPE DMX_Mode :
+(
+	INIT := 0,
+	MODE_ADDRESS,
+	MODE_DMX_DISCOVERY,
+	MODE_SET_ADDRESS,
+	MODE_OPTICAL_FEEDBACK,
+	ERROR
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -266,7 +266,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
 			<BitSize>1</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -309,7 +309,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{1DAAD130-3D14-4FCC-BF58-3387EA54043E}" Name="DMX_Plc" PrjFilePath="DMX_Plc\DMX_Plc.plcproj" TmcFilePath="DMX_Plc\DMX_Plc.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{4DB76FB1-88FB-9ED7-3547-7FF72BEE6017}" TmcPath="DMX_Plc\DMX_Plc.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{E19661BA-31BD-A3FF-4086-51D515ECB1C5}" TmcPath="DMX_Plc\DMX_Plc.tmc">
 					<Name>DMX_Plc Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -320,6 +320,7 @@
 						</Var>
 						<Var>
 							<Name>MAIN.Mover1</Name>
+							<Comment><![CDATA[Mover Control Structure]]></Comment>
 							<Type GUID="{5A3ABA90-A98E-03F1-9C55-96450DA8E784}">Mover_13Ch</Type>
 						</Var>
 					</Vars>
