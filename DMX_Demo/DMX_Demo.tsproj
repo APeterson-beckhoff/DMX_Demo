@@ -115,6 +115,64 @@
 			</SubItem>
 		</DataType>
 		<DataType>
+			<Name GUID="{60015191-2344-AD84-98B7-743631181DA2}" Namespace="Tc2_DMX" AutoDeleteType="true">ST_EL6851OutData</Name>
+			<BitSize>4160</BitSize>
+			<SubItem>
+				<Name>bTransmitRequest</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ only for RDM]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>bDisableCyclicTxD</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>bSendDefaultData</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>byDummy1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>24</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>wChannelLength</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000004}">WORD</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>byStartCode</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
+				<Comment><![CDATA[ always 0x00 except RDM: 0xCC]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>byDummy2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>56</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>arrData</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
+				<ArrayInfo>
+					<LBound>1</LBound>
+					<Elements>512</Elements>
+				</ArrayInfo>
+				<BitSize>4096</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
 			<Name GUID="{5A3ABA90-A98E-03F1-9C55-96450DA8E784}" AutoDeleteType="true">Mover_13Ch</Name>
 			<BitSize>104</BitSize>
 			<SubItem>
@@ -199,64 +257,6 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{60015191-2344-AD84-98B7-743631181DA2}" Namespace="Tc2_DMX" AutoDeleteType="true">ST_EL6851OutData</Name>
-			<BitSize>4160</BitSize>
-			<SubItem>
-				<Name>bTransmitRequest</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[ only for RDM]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>bDisableCyclicTxD</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>8</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>bSendDefaultData</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>16</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>byDummy1</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>24</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>wChannelLength</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000004}">WORD</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>32</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>byStartCode</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
-				<Comment><![CDATA[ always 0x00 except RDM: 0xCC]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>48</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>byDummy2</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>56</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>arrData</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
-				<ArrayInfo>
-					<LBound>1</LBound>
-					<Elements>512</Elements>
-				</ArrayInfo>
-				<BitSize>4096</BitSize>
-				<BitOffs>64</BitOffs>
-			</SubItem>
-		</DataType>
-		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-002000000009}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..8] OF BIT</Name>
 			<BitSize>9</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
@@ -266,7 +266,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
 			<BitSize>1</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -298,8 +298,9 @@
 		<ImageData Id="1001">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ff000000000000ff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ff000000ff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ff000000ff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ff000000000000ff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
 		<ImageData Id="1002">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{69569BEA-CB70-494E-B68C-3B24F742ADB3}" TargetNetId="10.200.106.16.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
+	<Project ProjectGUID="{69569BEA-CB70-494E-B68C-3B24F742ADB3}" TargetNetId="5.166.201.234.1.1" ShowHideConfigurations="#x6">
 		<System>
+			<Settings MaxCpus="20" PCoreAffinity="4095" ECoreAffinity="1044480"/>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
@@ -307,19 +308,19 @@
 			</Tasks>
 		</System>
 		<Plc>
-			<Project GUID="{1DAAD130-3D14-4FCC-BF58-3387EA54043E}" Name="DMX_Plc" PrjFilePath="DMX_Plc\DMX_Plc.plcproj" TmcFilePath="DMX_Plc\DMX_Plc.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{74D1E671-0465-6EBD-8661-270807014EC2}" TmcPath="DMX_Plc\DMX_Plc.tmc">
+			<Project GUID="{1DAAD130-3D14-4FCC-BF58-3387EA54043E}" Name="DMX_Plc" PrjFilePath="DMX_Plc\DMX_Plc.plcproj" TmcFilePath="DMX_Plc\DMX_Plc.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{5F038680-ED27-1CBC-FE88-0923EE62C3F8}" TmcPath="DMX_Plc\DMX_Plc.tmc">
 					<Name>DMX_Plc Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
 						<Name>PlcTask Outputs</Name>
 						<Var>
-							<Name>MAIN.Mover1</Name>
-							<Type GUID="{5A3ABA90-A98E-03F1-9C55-96450DA8E784}">Mover_13Ch</Type>
-						</Var>
-						<Var>
 							<Name>MAIN.ST_EL6851OutData_01</Name>
 							<Type GUID="{60015191-2344-AD84-98B7-743631181DA2}" Namespace="Tc2_DMX">ST_EL6851OutData</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.Mover1</Name>
+							<Type GUID="{5A3ABA90-A98E-03F1-9C55-96450DA8E784}">Mover_13Ch</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="1">
@@ -347,31 +348,16 @@
 			</Project>
 		</Plc>
 		<Io>
-			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="10.200.106.16.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
+			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="5.166.201.234.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
 				<Name>Device 1 (EtherCAT)</Name>
 				<AddressInfo>
 					<Ccat>
-						<Address>-1996488704</Address>
-						<Offset>131072</Offset>
-						<Size>8192</Size>
+						<Address>536870912</Address>
+						<Offset>65536</Offset>
+						<Size>16384</Size>
 						<BaseAddr>0</BaseAddr>
-						<BusNo>2</BusNo>
+						<BusNo>65535</BusNo>
 						<SlotNo>0</SlotNo>
-						<VendorId>5612</VendorId>
-						<DeviceId>20480</DeviceId>
-						<Dma>
-							<Address>0</Address>
-							<Offset>4096</Offset>
-							<Size>256</Size>
-							<BaseAddr>2</BaseAddr>
-							<RxChn>0</RxChn>
-							<TxChn>1</TxChn>
-						</Dma>
-						<Identification>
-							<Value>-1775005300</Value>
-							<Version>1</Version>
-							<Size>512</Size>
-						</Identification>
 					</Ccat>
 				</AddressInfo>
 				<Image Id="1" AddrType="9" ImageType="3">
@@ -380,7 +366,7 @@
 				<Box Id="1" BoxType="9099">
 					<Name>Term 1 (EK1200)</Name>
 					<ImageId>1000</ImageId>
-					<EtherCAT PdiType="#x0100" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04b02c52" RevisionNo="#x00001388" InfoDataState="false" PortPhys="49" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1200-5000 EtherCAT Power supply (2A E-Bus)" Desc="EK1200" PortABoxInfo="#x00ffffff"/>
+					<EtherCAT PdiType="#x0100" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04b02c52" RevisionNo="#x00001b58" InfoDataState="false" PortPhys="49" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1200-7000 EtherCAT Power supply (1,5A E-Bus)" Desc="EK1200" PortABoxInfo="#x00ffffff"/>
 					<Box Id="2" BoxType="9099" BoxFlags="#x00000020">
 						<Name>Term 2 (EL6851)</Name>
 						<ImageId>1001</ImageId>
@@ -3573,15 +3559,20 @@
 	</Project>
 	<Mappings>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500821000403}" Id="#x02030020"/>
 		<OwnerA Name="TIPC^DMX_Plc^DMX_Plc Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL6851)">
 				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^bCyclicTxDDisabled" VarB="DMX Status^Cyclic TxD disabled"/>
 				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^bDefaultDataSent" VarB="DMX Status^Default data sent"/>
 				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^bFrameSentToggle" VarB="DMX Status^Frame sent toggle"/>
+				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^bInputToggle" VarB="WcState^InputToggle"/>
 				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^bReceiveToggle" VarB="DMX Status^Receive toggle"/>
 				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^bTransmitAccepted" VarB="DMX Status^Transmit accepted"/>
 				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^bTxPDOToggle" VarB="DMX Status^TxPDO Toggle"/>
+				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^bWcState" VarB="WcState^WcState"/>
 				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^byStartCode" VarB="DMX Status^Start code"/>
+				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^stAdsAddr" VarB="InfoData^AdsAddr"/>
+				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^uiState" VarB="InfoData^State"/>
 				<Link VarA="PlcTask Inputs^MAIN.ST_EL6851InData_01^wChannelLength" VarB="DMX Status^Channel length"/>
 				<Link VarA="PlcTask Outputs^MAIN.Mover1^Blue" VarB="DMX Channel 1-64^Channel 10"/>
 				<Link VarA="PlcTask Outputs^MAIN.Mover1^CH12" VarB="DMX Channel 1-64^Channel 12"/>

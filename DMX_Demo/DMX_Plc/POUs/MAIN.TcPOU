@@ -2,18 +2,23 @@
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MAIN" Id="{5b7ed463-4ea7-4cdb-807c-6eeb36d90ee8}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
+
 VAR
+	{attribute 'OPC.UA.DA' := '1'}
 	FB_DMXDiscovery512_01: FB_DMXDiscovery512;
+	{attribute 'OPC.UA.DA' := '1'}
 	DMX_CommandBuffer:ST_DMXCommandBuffer;
 	FB_EL6851CommunicationEx_01: FB_EL6851CommunicationEx;
 	ST_EL6851InData_01 AT %I* : ST_EL6851InDataEx;
 	ST_EL6851OutData_01 AT %Q*: ST_EL6851OutData;
 	ProcessData : ARRAY [1..512] OF BYTE; 
-	
+	{attribute 'OPC.UA.DA' := '1'}
 	Mover1 AT %Q* : Mover_13Ch;
 	
+	{attribute 'OPC.UA.DA' := '1'}
 	FixtureChLength : UINT := 13;
 	
+	{attribute 'OPC.UA.DA' := '1'}
 	TestBool : BOOL;
 	
 END_VAR
@@ -21,7 +26,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[
 
-FB_EL6851CommunicationEx_01(
+(*FB_EL6851CommunicationEx_01(
 	wSourceManufacturerId:= , 
 	dwSourceDeviceId:= , 
 	bEnableSendingData:= , 
@@ -41,6 +46,7 @@ FB_EL6851CommunicationEx_01(
 	stCommandBuffer:= DMX_CommandBuffer, 
 	arrProcessData:= ProcessData);
 
+
 FB_DMXDiscovery512_01(
 	bStart:= , 
 	dwOptions:= DMX_OPTION_COMPLETE_NEW_DISCOVERY, 
@@ -53,7 +59,7 @@ FB_DMXDiscovery512_01(
 	uiNextDMX512StartAddress=> , 
 	iFoundDevices=> , 
 	stCommandBuffer:= DMX_CommandBuffer);
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
