@@ -9,7 +9,7 @@ VAR
 	
 	//Var to select the Mode the DMX should operate in
 	// 0 = ADDRESS Mode, 1 = RDM Mode, 2 = DMX Address Set, 3 = Optical Feedback
-	iModeSelect : INT; 
+	iModeSelect : INT := 1; 
 
 
 	//DMX Fuction Blocks
@@ -34,11 +34,7 @@ END_VAR
 	DMX_Mode.INIT:
 		//Checks for errors then moves to the mode selected with iModeSelect
 		IF NOT FB_EL6851CommunicationEx_01.bError AND NOT FB_DMXDiscovery512_01.bError THEN
-			IF iModeSelect = 0 THEN		
-				eDMX_Mode := DMX_Mode.MODE_ADDRESS;
-			ELSIF iModeSelect = 1 THEN
-				eDMX_Mode := DMX_Mode.MODE_DMX_DISCOVERY;
-			END_IF
+			eDMX_Mode := ModeSwitch(iModeSelect);
 		END_IF
 		
 	//Cyclic Writing to DMX Addresses
@@ -48,15 +44,9 @@ END_VAR
 		FB_EL6851CommunicationEx_01.uiDataLength := FixtureChLength;
 		
 		//Exit the MODE_ADDRESS state to change to a different mode
-		IF iModeSelect <> 1 AND NOT FB_DMXDiscovery512_01.bBusy THEN
+		IF NOT FB_DMXDiscovery512_01.bBusy THEN
 			FB_DMXDiscovery512_01.bStart := FALSE;
-			IF iModeSelect = 0 THEN
-				eDMX_Mode := DMX_Mode.MODE_ADDRESS;
-			ELSIF iModeSelect = 2 THEN
-				eDMX_Mode := DMX_Mode.MODE_SET_ADDRESS;
-			ELSIF iModeSelect = 3 THEN
-				eDMX_Mode := DMX_Mode.MODE_OPTICAL_FEEDBACK;
-			END_IF
+			eDMX_Mode := ModeSwitch(iModeSelect);
 		END_IF
 		
 	//DMX Discovery - Non cyclic 	
@@ -67,15 +57,8 @@ END_VAR
 		FB_DMXDiscovery512_01.dwOptions := DMX_OPTION_COMPLETE_NEW_DISCOVERY;
 		
 		//Exit the MODE_DMX_Discovery State to change to a different mode
-		IF iModeSelect <> 1 AND NOT FB_DMXDiscovery512_01.bBusy THEN
-			FB_DMXDiscovery512_01.bStart := FALSE;
-			IF iModeSelect = 0 THEN
-				eDMX_Mode := DMX_Mode.MODE_ADDRESS;
-			ELSIF iModeSelect = 2 THEN
-				eDMX_Mode := DMX_Mode.MODE_SET_ADDRESS;
-			ELSIF iModeSelect = 3 THEN
-				eDMX_Mode := DMX_Mode.MODE_OPTICAL_FEEDBACK;
-			END_IF
+		IF NOT FB_DMXDiscovery512_01.bBusy THEN
+			eDMX_Mode := ModeSwitch(iModeSelect);
 		END_IF
 	
 	//DMX Set Addresses - Non cyclic 	
@@ -86,16 +69,9 @@ END_VAR
 		FB_DMXDiscovery512_01.dwOptions := DMX_OPTION_SET_START_ADDRESS;
 		
 		//Exit the MODE_DMX_Discovery State to change to a different mode
-		IF iModeSelect <> 2 AND NOT FB_DMXDiscovery512_01.bBusy THEN
+		IF NOT FB_DMXDiscovery512_01.bBusy THEN
 			FB_DMXDiscovery512_01.bStart := FALSE;
-		
-			IF iModeSelect = 0 THEN
-				eDMX_Mode := DMX_Mode.MODE_ADDRESS;
-			ELSIF iModeSelect = 1 THEN
-				eDMX_Mode := DMX_Mode.MODE_DMX_DISCOVERY;
-			ELSIF iModeSelect = 3 THEN
-				eDMX_Mode := DMX_Mode.MODE_OPTICAL_FEEDBACK;
-			END_IF
+			eDMX_Mode := ModeSwitch(iModeSelect);
 		END_IF
 		
 	//DMX Optical Feedback - Non cyclic 	
@@ -106,16 +82,9 @@ END_VAR
 		FB_DMXDiscovery512_01.dwOptions := DMX_OPTION_OPTICAL_FEEDBACK;
 		
 		//Exit the MODE_DMX_Discovery State to change to a different mode
-		IF iModeSelect <> 3 AND NOT FB_DMXDiscovery512_01.bBusy THEN
+		IF NOT FB_DMXDiscovery512_01.bBusy THEN
 			FB_DMXDiscovery512_01.bStart := FALSE;
-		
-			IF iModeSelect = 0 THEN
-				eDMX_Mode := DMX_Mode.MODE_ADDRESS;
-			ELSIF iModeSelect = 1 THEN
-				eDMX_Mode := DMX_Mode.MODE_DMX_DISCOVERY;
-			ELSIF iModeSelect = 2 THEN
-				eDMX_Mode := DMX_Mode.MODE_SET_ADDRESS;
-			END_IF
+			eDMX_Mode := ModeSwitch(iModeSelect);
 		END_IF
 	
 	DMX_Mode.ERROR:

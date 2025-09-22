@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="ModeSwitch" Id="{3a0be595-9d82-4260-9243-25dc9f2297d5}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION ModeSwitch : DMX_Mode
+VAR_INPUT
+	Target	: INT;
+END_VAR
+VAR
+	eMode : DMX_Mode;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+IF Target = 0 THEN
+	eMode := DMX_Mode.INIT;
+ELSIF Target = 1 THEN
+	eMode := DMX_Mode.MODE_ADDRESS;
+ELSIF Target = 2 THEN
+	eMode := DMX_Mode.MODE_DMX_DISCOVERY;
+ELSIF Target = 3 THEN
+	eMode := DMX_Mode.MODE_SET_ADDRESS;
+ELSIF Target = 4 THEN
+	eMode := DMX_Mode.MODE_OPTICAL_FEEDBACK;
+END_IF
+
+ModeSwitch := eMode;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
